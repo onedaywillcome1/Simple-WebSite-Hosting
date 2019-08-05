@@ -34,7 +34,7 @@ After Cloudformation stack created, Upload the contents of the html files into t
     aws s3 cp --acl public-read --recursive code/ s3://$DOMAIN_NAME/
 
 ## Getting URL of static website
-, execute following command to retrieve output:
+Execute following command to retrieve website output:
 
     aws cloudformation describe-stacks --stack-name $STACK_NAME --query "Stacks[0].Outputs[?OutputKey=='WebsiteURL'].OutputValue" --output text
     
