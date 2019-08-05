@@ -8,8 +8,8 @@ This project creates simple website hosting via S3. The cloudformation script wh
   - `export AWS_SECRET_ACCESS_KEY=<YOUR_AWS_SECRET_KEY>`
   - `export AWS_DEFAULT_REGION=us-east-1`
   - `export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --output text --query 'Account')`
-  - `export STACK_NAME=vngrswebsitehosting`
-  - `export DOMAIN_NAME=vngrsdemowebsite-$AWS_ACCOUNT_ID`
+  - `export STACK_NAME=samplewebsitehosting`
+  - `export DOMAIN_NAME=sampledemowebsite-$AWS_ACCOUNT_ID`
 
 
 ## Infrastructure
@@ -38,5 +38,5 @@ Execute following command to retrieve website output:
 
     aws cloudformation describe-stacks --stack-name $STACK_NAME --query "Stacks[0].Outputs[?OutputKey=='WebsiteURL'].OutputValue" --output text
     
-Sample URL: `http://vngrsdemowebsite-111111111.s3-website-us-east-1.amazonaws.com`
+Sample URL: `http://sampledemowebsite-111111111.s3-website-us-east-1.amazonaws.com`
     
