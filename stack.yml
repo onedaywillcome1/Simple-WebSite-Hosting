@@ -4,7 +4,7 @@ Parameters:
   DomainName:
     Type: String
     Description: The name of your website. It must be unique.
-    AllowedPattern : ".+"
+    AllowedPattern: ".+"
 Resources:
   WebsiteBucket:
     Type: AWS::S3::Bucket
